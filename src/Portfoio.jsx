@@ -20,7 +20,7 @@ export default function Portfolio() {
             width="50"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>Open s-thom/ourflags.lgbt in GitHub</title>
+            <title>github</title>
             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
           </svg>
         </a>
@@ -48,8 +48,53 @@ export default function Portfolio() {
       </div>
       <div className="portfolio-div">
         <div className="project-div">
-          <p>project</p>
+          <h4>PingPong</h4>
           <div className="photo-div"></div>
+          <p>
+            This was my final group project at Dev Academy. Built in React
+            Native, it is a basic social media app designed to kill your
+            groupchat. Sign up, add your friends, and send a 'ping' with your
+            current location to let your friends know what you're up to!
+          </p>
+          <p>Built with react.js and redux.js for the front-end</p>
+          <div className="links-div">
+            <a href="https://www.google.co.nz" target="_blank" rel="noreferrer">
+              <svg
+                stroke="black"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="32"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>logo</title>
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a href="https://www.google.co.nz" target="_blank" rel="noreferrer">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Interface / Link">
+                  <path
+                    id="Vector"
+                    d="M9.1718 14.8288L14.8287 9.17192M7.05086 11.293L5.63664 12.7072C4.07455 14.2693 4.07409 16.8022 5.63619 18.3643C7.19829 19.9264 9.7317 19.9259 11.2938 18.3638L12.7065 16.9498M11.2929 7.05L12.7071 5.63579C14.2692 4.07369 16.8016 4.07397 18.3637 5.63607C19.9258 7.19816 19.9257 9.73085 18.3636 11.2929L16.9501 12.7071"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
         <div className="project-div">
           <h4>Password generator</h4>
@@ -65,9 +110,56 @@ export default function Portfolio() {
             characters (uppercase, lowercase, numbers, symbols). See how long
             your password will take to crack!
           </p>
+          <p>Built with react.js with a node.js server</p>
+          <div className="links-div">
+            <a
+              href="https://github.com/J-Haynes/password-gen"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                stroke="black"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="32"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>logo</title>
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a
+              href="https://jack-password-gen.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Interface / Link">
+                  <path
+                    id="Vector"
+                    d="M9.1718 14.8288L14.8287 9.17192M7.05086 11.293L5.63664 12.7072C4.07455 14.2693 4.07409 16.8022 5.63619 18.3643C7.19829 19.9264 9.7317 19.9259 11.2938 18.3638L12.7065 16.9498M11.2929 7.05L12.7071 5.63579C14.2692 4.07369 16.8016 4.07397 18.3637 5.63607C19.9258 7.19816 19.9257 9.73085 18.3636 11.2929L16.9501 12.7071"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
         <div className="project-div">
-          <p>personal blog</p>
+          <h4>Personal blog</h4>
           <div className="photo-div">
             <img src="./blog.png" alt="" />
           </div>
@@ -76,9 +168,55 @@ export default function Portfolio() {
             Aotearoa
           </p>
           <p>Created using vanilla html and css. </p>
+          <div className="links-div">
+            <a
+              href="https://github.com/J-Haynes/J-Haynes.github.io"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                stroke="black"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="32"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>logo</title>
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a
+              href="https://j-haynes.github.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Interface / Link">
+                  <path
+                    id="Vector"
+                    d="M9.1718 14.8288L14.8287 9.17192M7.05086 11.293L5.63664 12.7072C4.07455 14.2693 4.07409 16.8022 5.63619 18.3643C7.19829 19.9264 9.7317 19.9259 11.2938 18.3638L12.7065 16.9498M11.2929 7.05L12.7071 5.63579C14.2692 4.07369 16.8016 4.07397 18.3637 5.63607C19.9258 7.19816 19.9257 9.73085 18.3636 11.2929L16.9501 12.7071"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
         <div className="project-div">
-          <p>weather app</p>
+          <h4>Weather app</h4>
           <div className="photo-div">
             <img src="./weather.png" alt="" />
           </div>
@@ -91,20 +229,50 @@ export default function Portfolio() {
             data in a SQLite3 database to reduce API calls
           </p>
           <div className="links-div">
-            <svg
-              stroke="currentColor"
-              fill="none"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              height="32"
-              width="32"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              href="https://github.com/J-Haynes/weather-app"
+              target="_blank"
+              rel="noreferrer"
             >
-              <title>Open s-thom/ourflags.lgbt in GitHub</title>
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
+              <svg
+                stroke="black"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="32"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>logo</title>
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a
+              href="https://weather-app-omega-black.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Interface / Link">
+                  <path
+                    id="Vector"
+                    d="M9.1718 14.8288L14.8287 9.17192M7.05086 11.293L5.63664 12.7072C4.07455 14.2693 4.07409 16.8022 5.63619 18.3643C7.19829 19.9264 9.7317 19.9259 11.2938 18.3638L12.7065 16.9498M11.2929 7.05L12.7071 5.63579C14.2692 4.07369 16.8016 4.07397 18.3637 5.63607C19.9258 7.19816 19.9257 9.73085 18.3636 11.2929L16.9501 12.7071"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

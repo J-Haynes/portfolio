@@ -42,7 +42,7 @@ code {
   background-color: aqua;
   border-radius: 15px;
   margin: 15px;
-  padding: 0px 8px 0px 8px;
+  padding: 0px 10px 0px 10px;
 }
 
 .info-div h3 {
@@ -69,7 +69,10 @@ img {
 
 .links-div {
   position: relative;
-  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0 auto;
 }
 
 h4 {
