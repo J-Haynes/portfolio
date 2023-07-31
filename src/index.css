@@ -109,6 +109,7 @@ li {
   list-style: none;
   color: white;
   padding-left: 25px;
+  font-weight: bold;
 }
 
 li:hover {
@@ -122,8 +123,11 @@ li:hover {
   max-width: 1200px;
   width: 85vw;
   margin: auto;
+  padding: 15px;
+  position: sticky;
+  top: 0px;
   background-color: #0e141b;
-  padding-top: 15px;
+  border-bottom: 1px solid white;
 }
 
 .nav-list {
@@ -142,6 +146,7 @@ li:hover {
 
 .name-div p {
   color: white;
+  font-weight: bold;
 }
 
 svg:hover {
