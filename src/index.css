@@ -107,9 +107,33 @@ h4 {
 li {
   list-style: none;
   color: white;
+  padding-left: 25px;
 }
 
 .navbar {
   display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 85vw;
+  margin: auto;
+  background-color: #0e141b;
+  padding-top: 15px;
+}
 
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding: 0;
+}
+
+.name-div p {
+  color: white;
 }
