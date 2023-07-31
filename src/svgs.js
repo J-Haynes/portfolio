@@ -1,14 +1,14 @@
-export function githubSvg() {
+export function githubSvg(colour, size) {
   return (
     <svg
-      stroke="white"
+      stroke={colour}
       fill="none"
       stroke-width="2"
       viewBox="0 0 24 24"
       stroke-linecap="round"
       stroke-linejoin="round"
-      height="50"
-      width="50"
+      height={size}
+      width={size}
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>github</title>
@@ -17,12 +17,12 @@ export function githubSvg() {
   )
 }
 
-export function linkedInSvg() {
+export function linkedInSvg(colour, size) {
   return (
     <svg
-      fill="white"
-      width="50px"
-      height="50px"
+      fill={colour}
+      width={`${size}px`}
+      height={`${size}px`}
       viewBox="0 0 1920 1920"
       xmlns="http://www.w3.org/2000/svg"
     >

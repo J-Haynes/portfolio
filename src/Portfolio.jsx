@@ -12,14 +12,14 @@ export default function Portfolio() {
       </div>
       <div className="icons-div">
         <a href="https://github.com/J-Haynes" target="_blank" rel="noreferrer">
-          {githubSvg()}
+          {githubSvg('white', 50)}
         </a>
         <a
           href="https://www.linkedin.com/in/jack-haynes-nz/"
           target="_blank"
           rel="noreferrer"
         >
-          {linkedInSvg()}
+          {linkedInSvg('white', 50)}
         </a>
         <a
           href="https://drive.google.com/file/d/1z6SHxXnKD8cTs-0QeaXDib2J7pBG1Yis/view?usp=share_link"
