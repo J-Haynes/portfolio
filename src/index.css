@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(77, 67, 67)
+  background-color: #0e141b
 
 }
 
@@ -15,17 +15,20 @@ code {
 }
 
 .title-div {
+  display: flex;
   text-align: center;
   font-size: 45px;
-
+  height: 50vh;
+  flex-direction: column;
+    justify-content: center;
 }
 
 .portfolio-div {
   display: flex;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 85vw;
   height: auto;
-  background: rgb(77, 67, 67);
+  background: #0e141b;
   margin: 25px auto;
   flex-wrap: wrap;
   flex-direction: row;
@@ -35,7 +38,7 @@ code {
 
 .project-div {
   display: block;
-  max-width: 450px;
+  max-width: 550px;
   width: 45%;
   min-width:420px;
   height: 550px;
@@ -58,13 +61,13 @@ code {
   width: 90%;
   display: block;
   height: 250px;
-  background-color: purple;
   margin: 0 auto;
 }
 
 img {
   height: 100%;
   width: 100%;
+  object-fit: contain;
 }
 
 .links-div {
@@ -91,4 +94,22 @@ h4 {
     display: flex;
     justify-content: space-between;
     width: 300px;
+}
+
+.kiaora {
+  color: white;
+}
+
+.red {
+  color: #ff5277
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+
 }

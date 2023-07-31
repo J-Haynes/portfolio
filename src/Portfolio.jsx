@@ -54,13 +54,19 @@ export default function Portfolio() {
         <div className="project-div">
           <h4>PingPong</h4>
           <div className="photo-div">
-            <img src="./ping.png" alt="pingpong" />
+            <a
+              href="https://github.com/J-Haynes/pingpong"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="./ping.png" alt="pingpong" />
+            </a>
           </div>
           <p>
-            This was my final group project at Dev Academy. Built in React
-            Native, it is a basic social media app designed to kill your
-            groupchat. Sign up, add your friends, and send a 'ping' with your
-            current location to let your friends know what you're up to!
+            Built with React Native, 'PingPong' is a basic social media app
+            designed to kill your groupchat. Sign up, add your friends, and send
+            a 'ping' with your current location to let your friends know what
+            you're up to! Completed as my final project at Dev Academy Aoateroa
           </p>
           <p>Built with React Native and redux.js for the front-end</p>
           <div className="links-div">
@@ -89,7 +95,13 @@ export default function Portfolio() {
         <div className="project-div">
           <h4>Password generator</h4>
           <div className="photo-div">
-            <img src="./password.png" alt="" />
+            <a
+              href="https://jack-password-gen.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="./password.png" alt="" />
+            </a>
           </div>
           <p>
             {' '}
@@ -208,7 +220,13 @@ export default function Portfolio() {
         <div className="project-div">
           <h4>Weather app</h4>
           <div className="photo-div">
-            <img src="./weather.png" alt="" />
+            <a
+              href="https://weather-app-omega-black.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="./weather.png" alt="" />
+            </a>
           </div>
           <p>
             A simple, interactive full stack weather app built in react.js. See
