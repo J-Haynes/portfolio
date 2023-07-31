@@ -46,6 +46,7 @@ code {
   border-radius: 15px;
   margin: 15px;
   padding: 0px 10px 0px 10px;
+  border: 2px solid #ff5277;
 }
 
 .info-div h3 {
@@ -110,6 +111,11 @@ li {
   padding-left: 25px;
 }
 
+li:hover {
+  color: #ff5277;
+  cursor: pointer;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -135,5 +141,13 @@ li {
 }
 
 .name-div p {
+  color: white;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+.white {
   color: white;
 }
