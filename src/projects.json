@@ -29,7 +29,7 @@
       "url": "https://jack-eth-app.vercel.app/",
       "photo": "./ping.png",
       "description": "A simple Ethereum Block Explorer. Shows price info on Ethereum and Bitcoin as well as the latest block data",
-      "description2": "Built using React.js and Semantic UI. Price and coin supply data gathered from Coingecko and CoinMarketCap API. Block data soruced from Alchemy SDK"
+      "description2": "Built using React.js and Semantic UI. Price and coin supply data gathered from Coingecko and CoinMarketCap API. Block data sourced from Alchemy SDK"
     }
   ]
 }

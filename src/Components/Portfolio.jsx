@@ -12,7 +12,6 @@ export default function Portfolio() {
     <div className="container">
       <div className="portfolio-div">
         {projects.map((project) => {
-          console.log(project.description)
           return (
             <Project
               key={project.title}

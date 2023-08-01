@@ -1,4 +1,6 @@
 import React from 'react'
+import SourceCodeButton from './SourceCodeButton'
+import WebLinkButton from './WebLinkButton'
 import { githubSvg, linkSvg } from '../svgs'
 
 export default function Project(props) {
@@ -15,12 +17,8 @@ export default function Project(props) {
       <p>{description}</p>
       <p>{description2}</p>
       <div className="links-div">
-        <a href={sourcecode} target="_blank" rel="noreferrer">
-          {githubSvg('black', 32)}
-        </a>
-        <a href={url} target="_blank" rel="noreferrer">
-          {linkSvg(40)}
-        </a>
+        <SourceCodeButton sourcecode={sourcecode} />
+        <WebLinkButton url={url} />
       </div>
     </div>
   )

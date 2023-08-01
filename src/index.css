@@ -83,11 +83,11 @@ img {
   object-fit: contain;
 }
 
+
 .links-div {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 150px;
   margin: 10px auto;
 }
 
@@ -123,6 +123,13 @@ h4 {
   font-size: 20px;
   padding: 20px 0px;
   display: block;
+}
+
+
+img:hover {
+  .project-title {
+    color: black
+  }
 }
 
 li {
@@ -182,6 +189,38 @@ svg:hover {
   width: 85vw;
   max-width: 1200px;
   margin: auto;
+}
+
+.sourcecode a, .sourcecode a:visited {
+  display: flex;
+  justify-content: space-around;
+  width: 130px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #ff5277;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.weblink a, .weblink a:visited {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: 2px solid #ff5277;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.weblink a:hover, .sourcecode a:hover{
+  border: 2px solid black;
+}
+
+.sourcecode, .weblink {
+  padding:0px 10px;
 }
 
 @media only screen and (max-width: 768px) {
