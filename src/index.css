@@ -175,8 +175,14 @@ li:hover {
   font-weight: bold;
 }
 
-svg:hover {
+.icons-div #github:hover {
   cursor: pointer;
+  stroke: #ff5277;
+}
+
+.icons-div #linkedin:hover {
+  cursor: pointer;
+  fill: #ff5277;
 }
 
 .white {

@@ -1,6 +1,7 @@
 export function githubSvg(colour, size) {
   return (
     <svg
+      id="github"
       stroke={colour}
       fill="none"
       stroke-width="2"
@@ -20,6 +21,7 @@ export function githubSvg(colour, size) {
 export function linkedInSvg(colour, size) {
   return (
     <svg
+      id="linkedin"
       fill={colour}
       width={`${size}px`}
       height={`${size}px`}
