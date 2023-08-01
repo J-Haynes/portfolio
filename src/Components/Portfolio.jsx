@@ -10,20 +10,22 @@ const projects = data.projects
 export default function Portfolio() {
   return (
     <div className="container">
-      {projects.map((project) => {
-        console.log(project.description)
-        return (
-          <Project
-            key={project.title}
-            title={project.title}
-            url={project.url}
-            photo={project.photo}
-            description={project.description}
-            description2={project.description2}
-            sourcecode={project.sourcecode}
-          />
-        )
-      })}
+      <div className="portfolio-div">
+        {projects.map((project) => {
+          console.log(project.description)
+          return (
+            <Project
+              key={project.title}
+              title={project.title}
+              url={project.url}
+              photo={project.photo}
+              description={project.description}
+              description2={project.description2}
+              sourcecode={project.sourcecode}
+            />
+          )
+        })}
+      </div>
       {/* <div className="portfolio-div">
         <div className="project-div">
           <h4>PingPong</h4>

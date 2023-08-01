@@ -1,6 +1,13 @@
 {
   "projects": 
-  [
+  [ {
+    "title": "Ping Pong",
+    "url": "https://github.com/J-Haynes/pingpong",
+    "photo": "./ping.png",
+    "description": "Built with React Native, 'PingPong' is a basic social media app designed to kill your groupchat. Sign up, add your friends, and send a 'ping' with your current location to let your friends know what you're up to! Completed as my final project at Dev Academy Aoateroa",
+    "description2": "Built with React Native and redux.js for the front-end",
+    "sourcecode": "https://github.com/J-Haynes/pingpong"
+  },
     {
     "title": "Password Generator",
     "url": "https://jack-password-gen.vercel.app/",

@@ -6,7 +6,7 @@ export default function Project(props) {
 
   return (
     <div className="project-div" id={title}>
-      <span className="red">{title}</span>
+      <span className="project-title">{title}</span>
       <div className="photo-div">
         <a href={url} target="_blank" rel="noreferrer">
           <img src={photo} alt={title} />

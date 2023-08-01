@@ -115,6 +115,14 @@ h4 {
   color: #ff5277
 }
 
+.project-title {
+  color: #ff5277;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 0px;
+  display: block;
+}
+
 li {
   list-style: none;
   color: white;
