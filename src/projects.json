@@ -5,16 +5,31 @@
     "url": "https://github.com/J-Haynes/pingpong",
     "photo": "./ping.png",
     "description": "Built with React Native, 'PingPong' is a basic social media app designed to kill your groupchat. Sign up, add your friends, and send a 'ping' with your current location to let your friends know what you're up to! Completed as my final project at Dev Academy Aoateroa",
-    "description2": "Built with React Native and redux.js for the front-end",
+    "description2": "Built with React Native and Redux.js for the front-end",
     "sourcecode": "https://github.com/J-Haynes/pingpong"
   },
     {
     "title": "Password Generator",
     "url": "https://jack-password-gen.vercel.app/",
     "photo": "./password.png",
-    "description": "Inspired by passwordgenerator.net a simple front end app built in react.js for generating secure passwords. Choose your password length and select the types of characters (uppercase, lowercase, numbers, symbols). See how long your password will take to crack!",
-    "description2": "Built with react.js with a node.js server",
+    "description": "Inspired by passwordgenerator.net, 'Password Generator' is a simple front end app built in React.js for generating secure passwords. Choose your password length and select the types of characters (uppercase, lowercase, numbers, symbols). See how secure your password is and how long it will take to crack!",
+    "description2": "Built with React.js using create-react-app",
     "sourcecode": "https://github.com/J-Haynes/password-gen"
+    },
+    {
+      "title": "Weather App",
+      "url": "https://weather-app-omega-black.vercel.app/",
+      "photo": "./weather.png",
+      "description": "A simple, interactive full stack weather app built in React.js. See the current weather in the North Island of New Zealand.",
+      "description2": "Created using the stack I learned at Dev Academy. Stores weather data in a SQLite3 database to reduce API calls",
+      "sourcecode": "https://github.com/J-Haynes/weather-app"
+    },
+    {
+      "title": "Ethereum Block Explorer",
+      "url": "https://jack-eth-app.vercel.app/",
+      "photo": "./ping.png",
+      "description": "A simple Ethereum Block Explorer. Shows price info on Ethereum and Bitcoin as well as the latest block data",
+      "description2": "Built using React.js and Semantic UI. Price and coin supply data gathered from Coingecko and CoinMarketCap API. Block data soruced from Alchemy SDK"
     }
   ]
 }
