@@ -5,7 +5,7 @@
     "title": "Password Generator",
     "url": "https://jack-password-gen.vercel.app/",
     "photo": "./password.png",
-    "description": "Inspired by <a href='https://passwordsgenerator.net/'>passwordgenerator.net</a>, a simple front end app built in react.js for generating secure passwords. Choose your password length and select the types of characters (uppercase, lowercase, numbers, symbols). See how long your password will take to crack!",
+    "description": "Inspired by passwordgenerator.net a simple front end app built in react.js for generating secure passwords. Choose your password length and select the types of characters (uppercase, lowercase, numbers, symbols). See how long your password will take to crack!",
     "description2": "Built with react.js with a node.js server",
     "sourcecode": "https://github.com/J-Haynes/password-gen"
     }

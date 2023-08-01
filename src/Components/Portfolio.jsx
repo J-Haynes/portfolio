@@ -11,13 +11,15 @@ export default function Portfolio() {
   return (
     <div className="container">
       {projects.map((project) => {
+        console.log(project.description)
         return (
           <Project
+            key={project.title}
             title={project.title}
             url={project.url}
             photo={project.photo}
-            description={project.decsription}
-            description2={project.decsription2}
+            description={project.description}
+            description2={project.description2}
             sourcecode={project.sourcecode}
           />
         )

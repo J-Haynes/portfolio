@@ -5,7 +5,7 @@ export default function Project(props) {
   const { title, url, photo, description, description2, sourcecode } = props
 
   return (
-    <div className="project-div">
+    <div className="project-div" id={title}>
       <span className="red">{title}</span>
       <div className="photo-div">
         <a href={url} target="_blank" rel="noreferrer">
