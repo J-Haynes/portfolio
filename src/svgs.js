@@ -34,13 +34,13 @@ export function linkedInSvg(colour, size) {
   )
 }
 
-export function linkSvg(colour, size) {
+export function linkSvg(size) {
   return (
     <svg
       width={`${size}px`}
       height={`${size}px`}
       viewBox="0 0 24 24"
-      fill={colour}
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="Interface / Link">

@@ -1,10 +1,28 @@
 import React from 'react'
 import { githubSvg, linkedInSvg } from '../svgs'
 
+import Project from './Project'
+
+import data from '../projects.json'
+
+const projects = data.projects
+
 export default function Portfolio() {
   return (
     <div className="container">
-      <div className="portfolio-div">
+      {projects.map((project) => {
+        return (
+          <Project
+            title={project.title}
+            url={project.url}
+            photo={project.photo}
+            description={project.decsription}
+            description2={project.decsription2}
+            sourcecode={project.sourcecode}
+          />
+        )
+      })}
+      {/* <div className="portfolio-div">
         <div className="project-div">
           <h4>PingPong</h4>
           <div className="photo-div">
@@ -224,7 +242,7 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
