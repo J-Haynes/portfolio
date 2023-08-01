@@ -42,7 +42,9 @@ code {
 }
 
 .project-div {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 550px;
   width: 45%;
   min-width:350px;
@@ -86,7 +88,7 @@ img {
   display: flex;
   justify-content: space-between;
   width: 150px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 h4 {
