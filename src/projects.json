@@ -10,7 +10,7 @@
   },
     {
     "title": "Password Generator",
-    "url": "https://jack-password-gen.vercel.app/",
+    "url": "https://password.jackhaynes.dev/",
     "photo": "./password.png",
     "description": "Inspired by passwordgenerator.net, 'Password Generator' is a simple front end app built in React.js for generating secure passwords. Choose your password length and select the types of characters (uppercase, lowercase, numbers, symbols). See how secure your password is and how long it will take to crack!",
     "description2": "Built with React.js using create-react-app.",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Weather App",
-      "url": "https://weather-app-omega-black.vercel.app/",
+      "url": "https://weather.jackhaynes.dev/",
       "photo": "./weather.png",
       "description": "A simple, interactive full stack weather app built in React.js. See the current weather in the North Island of New Zealand.",
       "description2": "Created using the stack I learned at Dev Academy. Stores weather data in a SQLite3 database to reduce API calls.",
@@ -26,7 +26,7 @@
     },
     {
       "title": "Ethereum Block Explorer",
-      "url": "https://jack-eth-app.vercel.app/",
+      "url": "https://eth.jackhaynes.dev/",
       "photo": "./eth.png",
       "description": "A simple Ethereum Block Explorer. Shows price info on Ethereum and Bitcoin as well as the latest block data.",
       "description2": "Built using React.js and Semantic UI. Price and coin supply data gathered from Coingecko and CoinMarketCap API. Block data sourced from Alchemy SDK.",

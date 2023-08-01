@@ -1,7 +1,6 @@
 import React from 'react'
 import SourceCodeButton from './SourceCodeButton'
 import WebLinkButton from './WebLinkButton'
-import { githubSvg, linkSvg } from '../svgs'
 
 export default function Project(props) {
   const { title, url, photo, description, description2, sourcecode } = props

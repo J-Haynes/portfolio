@@ -1,8 +1,5 @@
 import React from 'react'
-import { githubSvg, linkedInSvg } from '../svgs'
-
 import Project from './Project'
-
 import data from '../projects.json'
 
 const projects = data.projects
