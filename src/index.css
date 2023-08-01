@@ -45,7 +45,7 @@ code {
   display: block;
   max-width: 550px;
   width: 45%;
-  min-width:420px;
+  min-width:350px;
   height: 550px;
   background-color: oldlace;
   border-radius: 15px;
@@ -171,4 +171,10 @@ svg:hover {
   width: 85vw;
   max-width: 1200px;
   margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    visibility:hidden
+  }
 }
