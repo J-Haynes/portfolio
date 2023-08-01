@@ -1,5 +1,5 @@
 import React from 'react'
-import { githubSvg, linkedInSvg } from './svgs'
+import { githubSvg, linkedInSvg } from '../svgs'
 
 export default function Portfolio() {
   return (

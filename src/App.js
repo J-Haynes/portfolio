@@ -1,10 +1,9 @@
-import logo from './logo.svg'
 import './App.css'
 import React from 'react'
 
-import Portfolio from './Portfolio'
-import Header from './Header'
-import NavBar from './Nav'
+import Portfolio from './Components/Portfolio'
+import Header from './Components/Header'
+import NavBar from './Components/Nav'
 
 function App() {
   return (

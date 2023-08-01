@@ -46,7 +46,8 @@ code {
   max-width: 550px;
   width: 45%;
   min-width:350px;
-  height: 550px;
+  min-height: 550px;
+  height: auto;
   background-color: oldlace;
   border-radius: 15px;
   margin: 15px;
