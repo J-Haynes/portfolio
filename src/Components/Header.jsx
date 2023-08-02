@@ -17,11 +17,11 @@ export default function Header() {
       </FadeIn>
       <FadeIn setDelay={1}>
         <div className="info-div">
-          <h3>
+          <h4>
             Hello! 👋 My name is Jack Haynes, a full stack web developer based
-            in Wellington, New Zealand
-          </h3>
-          <h3>Please check out my social links and projects below.</h3>
+            in Wellington, New Zealand.
+          </h4>
+          <h4>Please check out my social links and projects below.</h4>
         </div>
       </FadeIn>
       <FadeIn setDelay={1}>
