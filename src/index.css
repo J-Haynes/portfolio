@@ -155,11 +155,11 @@ li:hover {
   justify-content: space-between;
   width: 100%;
   margin: auto;
-  padding: 15px 0px;
+  padding-top: 15px;
   position: sticky;
   top: 0px;
   background-color: #0e141b6c;
-  /* border-bottom: 1px solid white; */
+  z-index: 1;
 }
 
 .nav-list {
@@ -238,6 +238,5 @@ li:hover {
 @media only screen and (max-width: 768px) {
   .navbar {
     visibility:hidden;
-    position: absolute;
   }
 }
