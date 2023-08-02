@@ -25,7 +25,7 @@ code {
   font-size: 45px;
   height: 50vh;
   flex-direction: column;
-    justify-content: center;
+  justify-content: center;
 }
 
 .portfolio-div {
@@ -62,9 +62,14 @@ code {
 }
 
 .info-div h3 {
+  font-size: 25px;
   text-align: center;
   color: white;
 }
+/* 
+.info-div {
+  height: 150px;
+} */
 
 .project-div p {
   text-align: center;
