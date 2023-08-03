@@ -224,7 +224,7 @@ li:hover {
   color: black;
   border: 2px solid #ff5277;
   border-radius: 15px;
-  padding: 5px;
+  padding: 5px 9px 5px 5px;
 }
 
 .weblink a:hover, .sourcecode a:hover{
