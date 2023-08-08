@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <>
       <FadeIn setDelay={0}>
-        <div className="title-div">
+        <div className="title-div" id="title">
           <h4 className="kiaora">
             Kia Ora! My name is <span className="red">Jack</span>
           </h4>

@@ -7,9 +7,19 @@ export default function NavBar() {
         </div>
         <div className="nav-list">
           <ul>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <a href="#title">
+              <li>Home</li>
+            </a>
+            <a href="#projects">
+              <li>Projects</li>
+            </a>
+            <a
+              href="https://github.com/J-Haynes/portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li>Source</li>
+            </a>
           </ul>
         </div>
       </div>

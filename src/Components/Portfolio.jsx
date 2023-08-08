@@ -9,7 +9,7 @@ const projects = data.projects
 export default function Portfolio() {
   return (
     <FadeIn setDelay={2}>
-      <div className="container">
+      <div className="container" id="projects">
         <div className="portfolio-div">
           {projects.map((project) => {
             return (
