@@ -41,7 +41,7 @@ export default function Header() {
             {linkedInSvg('white', 50)}
           </a>
           <a
-            href="https://drive.google.com/file/d/1z6SHxXnKD8cTs-0QeaXDib2J7pBG1Yis/view?usp=share_link"
+            href="https://drive.google.com/file/d/13OzzgRLCG2RvfOncRGdP3FPzz7gHCuJK/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
