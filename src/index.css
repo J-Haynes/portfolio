@@ -172,18 +172,29 @@ li:hover {
   z-index: 1;
 }
 
-.nav-list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .nav-list ul {
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
   padding: 0;
+}
+
+.nav-list ul li {
+  list-style: none;
+  color: white;
+  padding-left: 25px;
+  font-weight: bold;
+}
+
+.nav-list ul li:hover a {
+  color: #ff5277;
+  text-decoration: none; /* Removes the underline on hover */
+}
+
+.nav-list ul li a {
+  text-decoration: none; /* Removes underline by default */
+  color: inherit; /* Inherit parent color (white) */
 }
 
 .name-div p {
