@@ -42,6 +42,7 @@ code {
   align-items: center;
 }
 
+
 .project-div {
   display: flex;
   flex-direction: column;
@@ -55,7 +56,11 @@ code {
   border-radius: 15px;
   margin: 15px;
   padding: 0px 10px 0px 10px;
-  border: 2px solid #ff5277;
+  border: 5px solid #cd647b;
+}
+
+.project-div:hover {
+  border: 5px solid #ff007a
 }
 
 .container {
@@ -104,6 +109,11 @@ h4 {
 .cv-img {
   height: 50px;
   width: 40px;
+  filter: none;
+}
+
+.cv-img:hover {
+  filter: invert(54%) sepia(93%) saturate(748%) hue-rotate(317deg) brightness(94%) contrast(101%);
 }
 
 .icons-div {

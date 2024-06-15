@@ -17,14 +17,6 @@
     "sourcecode": "https://github.com/J-Haynes/password-gen"
     },
     {
-      "title": "Weather App",
-      "url": "https://weather.jackhaynes.dev/",
-      "photo": "./weather.png",
-      "description": "A simple, interactive full stack weather app built in React.js. See the current weather in the North Island of New Zealand.",
-      "description2": "Created using the stack I learned at Dev Academy. Stores weather data in a SQLite3 database to reduce API calls.",
-      "sourcecode": "https://github.com/J-Haynes/weather-app"
-    },
-    {
       "title": "Ethereum Block Explorer",
       "url": "https://eth.jackhaynes.dev/",
       "photo": "./eth.png",
@@ -32,6 +24,22 @@
       "description2": "Built using React.js and Semantic UI. Price and coin supply data gathered from Coingecko and CoinMarketCap API. Block data sourced from Alchemy SDK.",
       "sourcecode": "https://github.com/J-Haynes/eth-app"
       
+    },
+    {
+      "title": "Personal Portfolio",
+      "url": "https://jackhaynes.dev/",
+      "photo": "./portfolio.png",
+      "description": "My portfolio development work. A simple, front-end only application built during careers week at Dev Academy Aotearoas",
+      "description2": "Built with React.js and vanilla CSS. Uses a projects.json file for easy updating",
+      "sourcecode": "https://github.com/J-Haynes/portfolio"
+    },
+    {
+      "title": "Weather App",
+      "url": "https://weather.jackhaynes.dev/",
+      "photo": "./weather.png",
+      "description": "A simple, interactive full stack weather app built in React.js. See the current weather in the North Island of New Zealand.",
+      "description2": "Created using the stack I learned at Dev Academy. Stores weather data in a SQLite3 database to reduce API calls.",
+      "sourcecode": "https://github.com/J-Haynes/weather-app"
     }
   ]
 }
