@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     name: "Supercars Timing",
     summary:
-      "Live timing for Supercars and F1 races. Follow every car's position, lap times and the gaps between them as they happen, with a live 3D map showing where each car is on the track.",
+      "Live timing for Supercars and F1 races. Follow every car's position, lap times and the gaps between them as they happen, with a live 3D map showing where each car is on the track. Insights such as pit windows, battle-packs.",
     stack: ["C#", "ASP.NET Core", "React", "TypeScript"],
     accent: "#e2231a",
     code: "https://github.com/J-Haynes/supercars-timing",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     name: "Club++",
     summary:
-      "A mobile first PWA for a private supermarket loyalty card. Generates a barcode on your phone without asking for any personal details, explains what loyalty schemes really do with your data.",
+      "A private supermarket loyalty card, built for mobile and installable as a PWA. Generates a barcode on your phone without asking for any personal details, explains what loyalty schemes really do with your data.",
     stack: ["Next.js", "TypeScript"],
     accent: "#fbbf24",
     code: "https://github.com/J-Haynes/clubplusplus",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     },
   },
   {
-    name: "RuneLite PG Tools",
+    name: "RuneLite PvP Tools",
     summary:
       "A pvp focussed fork of the popular Old School Runescape client 'Runelite'. Features a Discord integration, and several other tools to help players follow their leader's call, stay alive, and win the fight!",
     stack: ["Java", "RuneLite"],
