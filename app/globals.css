@@ -287,10 +287,11 @@ a {
     var(--surface);
 }
 
-/* Phones rise out of the bottom edge of the panel. */
+/* Phone panels are portrait, so the whole phone fits. */
 .project-media:has(.frame-phone) {
-  place-items: start center;
-  padding-bottom: 0;
+  aspect-ratio: 4 / 5;
+  grid-template-rows: 100%;
+  padding: clamp(1.25rem, 3vw, 2rem);
 }
 
 .frame img,
@@ -301,13 +302,19 @@ a {
 }
 
 .frame-phone {
-  width: min(15rem, 62%);
-  align-self: start;
-  margin-top: 0.5rem;
+  /* Sized by the panel's height, in the shape of the 390 × 844 screen recordings. */
+  height: 100%;
+  aspect-ratio: 390 / 844;
   border: 6px solid #2b2826;
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.8);
+}
+
+.frame-phone img,
+.frame-phone video {
+  height: 100%;
+  object-fit: cover;
 }
 
 .frame-desktop {
