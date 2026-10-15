@@ -2,9 +2,8 @@ import type { StaticImageData } from "next/image";
 
 import clubplusplus from "@/public/projects/clubplusplus.png";
 import fixture from "@/public/projects/fixture.png";
-import supercarsTiming from "@/public/projects/SupercarsTiming.png"
-import pvptools from "@/public/projects/pvptools.jpg"
-
+import livetiming from "@/public/projects/livetiming.png";
+import pvptools from "@/public/projects/pvptools.png";
 
 export type Project = {
   name: string;
@@ -31,10 +30,11 @@ export const projects: Project[] = [
     accent: "#e2231a",
     code: "https://github.com/J-Haynes/supercars-timing",
     image: {
-      src: supercarsTiming,
-      alt: "The Supercars Timing app",
-      frame: "desktop"
-    }
+      src: livetiming,
+      video: "/projects/livetiming",
+      alt: "The Supercars Timing app replaying the first lap of the 2026 Bathurst 1000, with the timing tower and a 3D map of Mount Panorama",
+      frame: "desktop",
+    },
   },
   {
     name: "Club++",
@@ -60,9 +60,10 @@ export const projects: Project[] = [
     code: "https://github.com/J-Haynes/Runelite-pgtools",
     image: {
       src: pvptools,
-      alt: "The pvptools Runelite Fork",
-      frame: "desktop"
-    }
+      video: "/projects/pvptools",
+      alt: "The RuneLite PvP Tools client during a large clan fight in Old School RuneScape",
+      frame: "desktop",
+    },
   },
   {
     name: "Fixture",
