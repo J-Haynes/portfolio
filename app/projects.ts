@@ -46,6 +46,7 @@ export const projects: Project[] = [
     site: "https://clubplusplus.nz",
     image: {
       src: clubplusplus,
+      video: "/projects/clubplusplus",
       alt: "The Club++ app on a phone, showing a yellow loyalty card with a barcode and a Generate New Card button",
       frame: "phone",
     },
@@ -73,7 +74,8 @@ export const projects: Project[] = [
     site: "https://sportsapp-five.vercel.app",
     image: {
       src: fixture,
-      alt: "The Fixture app on a phone, listing upcoming Supercars and Formula 1 races by date",
+      video: "/projects/fixture",
+      alt: "The Fixture app on a phone, scrolling through upcoming Super Rugby, NRL, Supercars and Formula 1 fixtures",
       frame: "phone",
     },
   },
