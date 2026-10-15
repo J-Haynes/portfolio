@@ -1,0 +1,431 @@
+:root {
+  --bg: #0b0a09;
+  --surface: #151311;
+  --text: #ede9e4;
+  --muted: #9a938b;
+  --line: #2a2623;
+  --accent: #ff8c3a;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Buttons and links */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.button:hover {
+  border-color: var(--text);
+}
+
+.button-solid {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+.button-solid:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.text-link:hover {
+  color: var(--text);
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  color: var(--muted);
+  transition: color 0.2s, background 0.2s;
+}
+
+.icon-link:hover {
+  color: var(--text);
+  background: rgb(255 255 255 / 0.06);
+}
+
+/* Hero */
+
+/* How much of the first project shows below the hero. Short windows get the hero alone. */
+:root {
+  --peek: 7rem;
+}
+
+@media (max-height: 640px) {
+  :root {
+    --peek: 0px;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - var(--peek));
+  padding: var(--gutter);
+  /* Lines the text up with the projects column on wide screens. */
+  padding-inline: max(var(--gutter), (100% - 72rem) / 2 + var(--gutter));
+  overflow: hidden;
+  background: radial-gradient(ellipse at 72% 45%, #1a1613, var(--bg) 60%);
+}
+
+.track-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.track-canvas[data-ready] {
+  opacity: 1;
+}
+
+/* Drag to turn the circuit; vertical swipes still scroll the page on phones. */
+.track-canvas {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.track-canvas[data-dragging] {
+  cursor: grabbing;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 46rem;
+  /* Drags that start beside the text still reach the circuit. */
+  pointer-events: none;
+}
+
+.hero-content a {
+  pointer-events: auto;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero h1 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(3.25rem, 9vw, 8rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.hero-links .button {
+  margin-right: 0.5rem;
+}
+
+.track-caption {
+  position: absolute;
+  right: max(var(--gutter), (100% - 72rem) / 2 + var(--gutter));
+  bottom: var(--gutter);
+  display: grid;
+  justify-items: end;
+  gap: 0.2rem;
+  margin: 0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.track-readout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.track-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* Phones: the circuit sits above the name, the caption at the top. */
+@media (min-width: 860px) {
+  /* One word per line keeps the name clear of the circuit. */
+  .hero h1 {
+    width: min-content;
+  }
+}
+
+@media (max-width: 859px) {
+  .hero {
+    justify-content: flex-end;
+  }
+
+  .track-caption {
+    top: var(--gutter);
+    bottom: auto;
+    right: auto;
+    left: var(--gutter);
+    justify-items: start;
+  }
+}
+
+/* Projects */
+
+.projects {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem var(--gutter) clamp(4rem, 10vw, 8rem);
+}
+
+.projects h2 {
+  margin: 0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project:first-of-type {
+  padding-top: 1.25rem;
+  border-top: 0;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.project:nth-of-type(even) .project-media {
+  order: 2;
+}
+
+.project-media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 5 / 4;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--project-accent) 45%, transparent), transparent 70%),
+    var(--surface);
+}
+
+/* Phones rise out of the bottom edge of the panel. */
+.project-media:has(.frame-phone) {
+  place-items: start center;
+  padding-bottom: 0;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.frame-phone {
+  width: min(15rem, 62%);
+  align-self: start;
+  margin-top: 0.5rem;
+  border: 6px solid #2b2826;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.8);
+}
+
+.frame-desktop {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.8);
+}
+
+.frame-placeholder {
+  display: grid;
+  place-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed color-mix(in srgb, var(--project-accent) 50%, var(--line));
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.frame-placeholder span {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.frame-placeholder small {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project-text h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.project-text p {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack li {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 860px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .project:nth-of-type(even) .project-media {
+    order: 0;
+  }
+}
+
+/* Projects ease in as they scroll into view, where the browser supports it. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    /* The first one is already on screen when the page opens. */
+    .project:not(:first-of-type) {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem var(--gutter) 3rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--text);
+}
