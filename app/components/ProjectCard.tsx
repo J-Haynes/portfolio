@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 
 import type { Project } from "../projects";
 import { ArrowIcon } from "./icons";
+import ProjectVideo from "./ProjectVideo";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { name, summary, stack, accent, code, site, image } = project;
@@ -12,12 +13,22 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="project-media">
         {image ? (
           <div className={`frame frame-${image.frame}`}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              placeholder="blur"
-              sizes={image.frame === "phone" ? "300px" : "(max-width: 900px) 100vw, 640px"}
-            />
+            {image.video ? (
+              <ProjectVideo
+                src={image.video}
+                poster={image.src.src}
+                width={image.src.width}
+                height={image.src.height}
+                label={image.alt}
+              />
+            ) : (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                placeholder="blur"
+                sizes={image.frame === "phone" ? "300px" : "(max-width: 900px) 100vw, 640px"}
+              />
+            )}
           </div>
         ) : (
           <div className="frame frame-placeholder">

@@ -14,8 +14,12 @@ export type Project = {
   accent: string;
   code: string;
   site?: string;
-  /** Screenshots from a phone get a phone frame, the rest a browser window. */
-  image?: { src: StaticImageData; alt: string; frame: "phone" | "desktop" };
+  /**
+   * Screenshots from a phone get a phone frame, the rest a browser window. With a `video` (a path
+   * under public/ without the extension, with .webm and .mp4 files there), the clip plays in its
+   * place and the screenshot is its first frame.
+   */
+  image?: { src: StaticImageData; alt: string; frame: "phone" | "desktop"; video?: string };
 };
 
 export const projects: Project[] = [

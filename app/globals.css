@@ -293,7 +293,8 @@ a {
   padding-bottom: 0;
 }
 
-.frame img {
+.frame img,
+.frame video {
   display: block;
   width: 100%;
   height: auto;
