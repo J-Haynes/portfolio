@@ -6,7 +6,7 @@ import { ArrowIcon } from "./icons";
 import ProjectVideo from "./ProjectVideo";
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const { name, summary, stack, accent, code, site, image } = project;
+  const { name, summary, stack, accent, code, url, urlstring, image } = project;
 
   return (
     <article className="project" style={{ "--project-accent": accent } as CSSProperties}>
@@ -40,6 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="project-text">
         <h3>{name}</h3>
+        <a className="text-link" href="{url}" target="_blank">{urlstring}</a>
         <p>{summary}</p>
         <ul className="stack" aria-label="Built with">
           {stack.map((item) => (
@@ -47,13 +48,13 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </ul>
         <div className="project-links">
-          {site && (
-            <a className="button" href={site} target="_blank" rel="noreferrer">
-              Visit site <ArrowIcon />
+          {url && (
+            <a className="button" href={url} target="_blank" rel="noreferrer">
+              Visit<ArrowIcon />
             </a>
           )}
-          <a className={site ? "text-link" : "button"} href={code} target="_blank" rel="noreferrer">
-            View code <ArrowIcon />
+          <a className={url ? "text-link" : "button"} href={code} target="_blank" rel="noreferrer">
+            View source <ArrowIcon />
           </a>
         </div>
       </div>

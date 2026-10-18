@@ -12,7 +12,8 @@ export type Project = {
   /** Tint behind the screenshot, taken from the project's own colours. */
   accent: string;
   code: string;
-  site?: string;
+  url?: string;
+  urlstring?: string;
   /**
    * Screenshots from a phone get a phone frame, the rest a browser window. With a `video` (a path
    * under public/ without the extension, with .webm and .mp4 files there), the clip plays in its
@@ -25,11 +26,13 @@ export const projects: Project[] = [
   {
     name: "Supercars Timing",
     summary:
-      "Live timing for Supercars and F1 races. Follow every car's position, lap times and the gaps between them as they happen, with a live 3D map showing where each car is on the track. Insights such as pit windows, battle-packs.",
+      "Live timing for Supercars and F1 races. Follow every car's position, lap times, and the gaps between them as they happen. A live 3D map shows where each car is on the track. Insights such as pit windows, battle-packs.",
     stack: ["C#", "ASP.NET Core", "React", "TypeScript"],
     accent: "#e2231a",
     code: "https://github.com/J-Haynes/supercars-timing",
-    image: {
+    url: "https://supercars.jackhaynes.dev",
+    urlstring: "supercars.jackhaynes.dev"
+,    image: {
       src: livetiming,
       video: "/projects/livetiming",
       alt: "The Supercars Timing app replaying the first lap of the 2026 Bathurst 1000, with the timing tower and a 3D map of Mount Panorama",
@@ -43,7 +46,8 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript"],
     accent: "#fbbf24",
     code: "https://github.com/J-Haynes/clubplusplus",
-    site: "https://clubplusplus.nz",
+    url: "https://clubplusplus.nz",
+    urlstring: "clubplusplus.nz",
     image: {
       src: clubplusplus,
       video: "/projects/clubplusplus",
@@ -68,11 +72,12 @@ export const projects: Project[] = [
   {
     name: "Fixture",
     summary:
-      "Every upcoming match for my favourite sports in one place, from Supercars and Formula 1 to Super Rugby, with results once the games are over.",
-    stack: ["Next.js", "TypeScript"],
+      "Upcoming fixtures and results for my favourite sports in one place. A simple, mobile first PWA sports app without social/advertsing/gambling noise.",
+    stack: ["Next.js", "TypeScript", "PostgreSQL"],
     accent: "#10b981",
     code: "https://github.com/J-Haynes/fixture",
-    site: "https://sportsapp-five.vercel.app",
+    url: "https://sportsapp-five.vercel.app",
+    urlstring: "fixture.nz",
     image: {
       src: fixture,
       video: "/projects/fixture",
