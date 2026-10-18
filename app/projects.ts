@@ -81,7 +81,7 @@ export const projects: Project[] = [
     image: {
       src: fixture,
       video: "/projects/fixture",
-      alt: "The Fixture app on a phone, scrolling through upcoming Super Rugby, NRL, Supercars and Formula 1 fixtures",
+      alt: "The Fixture app on a phone, scrolling through upcoming fixtures and recent results, opening the league menu, and showing the Premier League, A-League and Champions League tables",
       frame: "phone",
     },
   },
