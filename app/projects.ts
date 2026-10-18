@@ -26,13 +26,13 @@ export const projects: Project[] = [
   {
     name: "Supercars Timing",
     summary:
-      "Live timing for Supercars and F1 races. Follow every car's position, lap times, and the gaps between them as they happen. A live 3D map shows where each car is on the track. Insights such as pit windows, battle-packs.",
+      "Live timing for Supercars and F1 races. Follow every car's position, lap times, and the gaps between them as they happen. A live 3D map shows where each car is on the track, with insights such as pit windows and battle packs.",
     stack: ["C#", "ASP.NET Core", "React", "TypeScript"],
     accent: "#e2231a",
     code: "https://github.com/J-Haynes/supercars-timing",
     url: "https://supercars.jackhaynes.dev",
-    urlstring: "supercars.jackhaynes.dev"
-,    image: {
+    urlstring: "supercars.jackhaynes.dev",
+    image: {
       src: livetiming,
       video: "/projects/livetiming",
       alt: "The Supercars Timing app replaying the first lap of the 2026 Bathurst 1000, with the timing tower and a 3D map of Mount Panorama",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     name: "RuneLite PvP Tools",
     summary:
-      "A pvp focussed fork of the popular Old School Runescape client 'Runelite'. Features a Discord integration, and several other tools to help players follow their leader's call, stay alive, and win the fight!",
+      "A PvP-focused fork of RuneLite, the popular Old School RuneScape client. Features a Discord integration, and several other tools to help players follow their leader's call, stay alive, and win the fight!",
     stack: ["Java", "RuneLite"],
     accent: "#c8a165",
     code: "https://github.com/J-Haynes/Runelite-pgtools",
@@ -72,11 +72,11 @@ export const projects: Project[] = [
   {
     name: "Fixture",
     summary:
-      "Upcoming fixtures and results for my favourite sports in one place. A simple, mobile first PWA sports app without social/advertsing/gambling noise.",
+      "Upcoming fixtures and results for my favourite sports in one place. A simple, mobile-first PWA sports app without social/advertising/gambling noise.",
     stack: ["Next.js", "TypeScript", "PostgreSQL"],
     accent: "#10b981",
     code: "https://github.com/J-Haynes/fixture",
-    url: "https://sportsapp-five.vercel.app",
+    url: "https://fixture.nz",
     urlstring: "fixture.nz",
     image: {
       src: fixture,

@@ -12,9 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const description = "Jack Haynes, Melbourne, Australia. Recent projects.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jackhaynes.dev"),
   title: "Jack Haynes",
-  description: "Jack Haynes, Melbourne, Australia. Recent projects.",
+  description,
+  openGraph: {
+    title: "Jack Haynes",
+    description,
+    url: "/",
+    siteName: "Jack Haynes",
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {

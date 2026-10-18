@@ -40,7 +40,11 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="project-text">
         <h3>{name}</h3>
-        <a className="text-link" href="{url}" target="_blank">{urlstring}</a>
+        {url && urlstring && (
+          <a className="text-link" href={url} target="_blank" rel="noreferrer">
+            {urlstring}
+          </a>
+        )}
         <p>{summary}</p>
         <ul className="stack" aria-label="Built with">
           {stack.map((item) => (

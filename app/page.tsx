@@ -1,5 +1,5 @@
 import ProjectCard from "./components/ProjectCard";
-import { GitHubIcon, LinkedInIcon } from "./components/icons";
+import { GitHubIcon, LinkedInIcon, MailIcon } from "./components/icons";
 import TrackHero from "./hero/TrackHero";
 import { projects } from "./projects";
 
@@ -24,6 +24,9 @@ export default function Home() {
               aria-label="LinkedIn"
             >
               <LinkedInIcon />
+            </a>
+            <a className="icon-link" href="mailto:mail@jackhaynes.dev" aria-label="Email">
+              <MailIcon />
             </a>
             <a className="icon-link" href="https://github.com/J-Haynes" target="_blank" rel="noreferrer" aria-label="GitHub">
               <GitHubIcon />
