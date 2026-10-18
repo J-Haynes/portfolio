@@ -16,8 +16,9 @@ export type Project = {
   urlstring?: string;
   /**
    * Screenshots from a phone get a phone frame, the rest a browser window. With a `video` (a path
-   * under public/ without the extension, with .webm and .mp4 files there), the clip plays in its
-   * place and the screenshot is its first frame.
+   * under public/ without the extension, with .webm and .mp4 files there plus half-size -sm.webm
+   * and -sm.mp4 copies for standard-density screens), the clip plays in its place and the
+   * screenshot is its first frame.
    */
   image?: { src: StaticImageData; alt: string; frame: "phone" | "desktop"; video?: string };
 };
