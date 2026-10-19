@@ -31,8 +31,8 @@ export const projects: Project[] = [
     stack: ["C#", "ASP.NET Core", "React", "TypeScript"],
     accent: "#e2231a",
     code: "https://github.com/J-Haynes/supercars-timing",
-    url: "https://supercars.jackhaynes.dev",
-    urlstring: "supercars.jackhaynes.dev",
+    url: "https://timing.jackhaynes.nz",
+    urlstring: "timing.jackhaynes.nz",
     image: {
       src: livetiming,
       video: "/projects/livetiming",
