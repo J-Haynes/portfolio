@@ -1,10 +1,10 @@
+/* Mount Panorama at night: tarmac, chalk lines and gum trees. The only colour is each project's own. */
 :root {
-  --bg: #0b0a09;
-  --surface: #151311;
-  --text: #ede9e4;
-  --muted: #9a938b;
-  --line: #2a2623;
-  --accent: #ff8c3a;
+  --tarmac: #1c1f22;
+  --tarmac-lit: #262a2e;
+  --chalk: #eceee9;
+  --gum: #8c9a8e;
+  --barrier: #343a3d;
   --gutter: clamp(1.25rem, 5vw, 4rem);
   color-scheme: dark;
 }
@@ -19,9 +19,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background: var(--tarmac);
+  color: var(--chalk);
+  font-family: var(--font-archivo), system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--chalk);
   outline-offset: 3px;
 }
 
@@ -41,43 +41,18 @@ a {
 .button {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.6rem 1.15rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.25rem;
+  background: var(--chalk);
+  color: var(--tarmac);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 650;
   text-decoration: none;
-  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  transition: background 0.2s;
 }
 
 .button:hover {
-  border-color: var(--text);
-}
-
-.button-solid {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--bg);
-}
-
-.button-solid:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.text-link:hover {
-  color: var(--text);
+  background: #fff;
 }
 
 .icon-link {
@@ -85,14 +60,12 @@ a {
   place-items: center;
   width: 2.75rem;
   height: 2.75rem;
-  border-radius: 999px;
-  color: var(--muted);
-  transition: color 0.2s, background 0.2s;
+  color: var(--gum);
+  transition: color 0.2s;
 }
 
 .icon-link:hover {
-  color: var(--text);
-  background: rgb(255 255 255 / 0.06);
+  color: var(--chalk);
 }
 
 /* Hero */
@@ -118,7 +91,7 @@ a {
   /* Lines the text up with the projects column on wide screens. */
   padding-inline: max(var(--gutter), (100% - 72rem) / 2 + var(--gutter));
   overflow: hidden;
-  background: radial-gradient(ellipse at 72% 45%, #1a1613, var(--bg) 60%);
+  background: radial-gradient(ellipse at 72% 45%, var(--tarmac-lit), var(--tarmac) 60%);
 }
 
 .track-canvas {
@@ -156,33 +129,32 @@ a {
   pointer-events: auto;
 }
 
-.eyebrow {
+/* The name is set extra-wide and heavy, like the lettering on a car. */
+.hero h1 {
   margin: 0;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-size: clamp(2.6rem, 8vw, 7rem);
+  font-stretch: 125%;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
 }
 
-.hero h1 {
-  margin: 0.5rem 0 0;
-  font-size: clamp(3.25rem, 9vw, 8rem);
-  font-weight: 600;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+.intro {
+  margin: 1.25rem 0 0;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--gum);
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin-top: 2rem;
 }
 
 .hero-links .button {
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
 }
 
 .track-caption {
@@ -191,13 +163,10 @@ a {
   bottom: var(--gutter);
   display: grid;
   justify-items: end;
-  gap: 0.2rem;
+  gap: 0.1rem;
   margin: 0;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-size: 0.875rem;
+  color: var(--gum);
   pointer-events: none;
 }
 
@@ -205,16 +174,14 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text);
+  color: var(--chalk);
   font-variant-numeric: tabular-nums;
 }
 
 .track-dot {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent);
 }
 
 /* Phones: the circuit sits above the name, the caption at the top. */
@@ -249,17 +216,10 @@ a {
 
 .projects h2 {
   margin: 0;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.project:first-of-type {
-  padding-top: 1.25rem;
-  border-top: 0;
+  font-size: 1.5rem;
+  font-stretch: 125%;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .project {
@@ -268,30 +228,27 @@ a {
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
   padding-block: clamp(2.5rem, 6vw, 4.5rem);
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--barrier);
+}
+
+.project:first-of-type {
+  padding-top: 2rem;
+  border-top: 0;
+}
+
+/* Phones are narrow, so their rows give the text more room. */
+.project:has(.project-media-phone) {
+  grid-template-columns: 0.75fr 1fr;
 }
 
 .project:nth-of-type(even) .project-media {
   order: 2;
 }
 
-.project-media {
+.project-media-phone {
   display: grid;
   place-items: center;
-  aspect-ratio: 5 / 4;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  overflow: hidden;
-  border-radius: 1.5rem;
-  background:
-    radial-gradient(circle at 50% 120%, color-mix(in srgb, var(--project-accent) 45%, transparent), transparent 70%),
-    var(--surface);
-}
-
-/* Phone panels are portrait, so the whole phone fits. */
-.project-media:has(.frame-phone) {
-  aspect-ratio: 4 / 5;
-  grid-template-rows: 100%;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  height: clamp(30rem, 46vw, 40rem);
 }
 
 .frame img,
@@ -301,14 +258,14 @@ a {
   height: auto;
 }
 
+/* The phone's case takes the project's colour. */
 .frame-phone {
-  /* Sized by the panel's height, in the shape of the 390 × 844 screen recordings. */
   height: 100%;
   aspect-ratio: 390 / 844;
-  border: 6px solid #2b2826;
-  border-radius: 2rem;
+  border: 7px solid color-mix(in srgb, var(--project-accent) 70%, var(--tarmac));
+  border-radius: 2.25rem;
   overflow: hidden;
-  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.8);
+  box-shadow: 0 32px 64px -24px rgb(0 0 0 / 0.7);
 }
 
 .frame-phone img,
@@ -317,103 +274,90 @@ a {
   object-fit: cover;
 }
 
+/* A browser window, its top edge trimmed in the project's colour. */
 .frame-desktop {
   width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 0.75rem;
+  border: 1px solid var(--barrier);
+  border-top: 4px solid var(--project-accent);
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.8);
+  box-shadow: 0 32px 64px -24px rgb(0 0 0 / 0.7);
 }
 
 .frame-placeholder {
   display: grid;
   place-items: center;
   gap: 0.25rem;
-  width: 100%;
-  height: 100%;
-  border: 1px dashed color-mix(in srgb, var(--project-accent) 50%, var(--line));
-  border-radius: 1rem;
+  aspect-ratio: 16 / 10;
+  border: 1px dashed var(--barrier);
+  border-top: 4px solid var(--project-accent);
+  border-radius: 0.5rem;
   text-align: center;
 }
 
 .frame-placeholder span {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-stretch: 112%;
+  font-weight: 750;
 }
 
 .frame-placeholder small {
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-size: 0.875rem;
+  color: var(--gum);
+}
+
+.project-text {
+  max-width: 34rem;
 }
 
 .project-text h3 {
   margin: 0;
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-stretch: 112%;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
 }
 
 .project-text p {
-  margin: 0.9rem 0 0;
-  color: var(--muted);
+  margin: 1rem 0 0;
+  color: var(--gum);
 }
 
-.stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.stack li {
-  padding: 0.2rem 0.6rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.72rem;
-  color: var(--muted);
+.project-text .stack {
+  font-size: 0.94rem;
 }
 
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 1.75rem;
+  gap: 0.5rem 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  font-weight: 600;
+  text-decoration: underline 2px var(--project-accent);
+  text-underline-offset: 0.35em;
+  transition: text-decoration-thickness 0.15s;
+}
+
+.project-links a:hover {
+  text-decoration-thickness: 4px;
 }
 
 @media (max-width: 860px) {
-  .project {
+  .project,
+  .project:has(.project-media-phone) {
     grid-template-columns: 1fr;
   }
 
   .project:nth-of-type(even) .project-media {
     order: 0;
   }
-}
 
-/* Projects ease in as they scroll into view, where the browser supports it. */
-@media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    /* The first one is already on screen when the page opens. */
-    .project:not(:first-of-type) {
-      animation: rise linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 40%;
-    }
-  }
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(2.5rem);
+  .project-media-phone {
+    height: min(34rem, 75svh);
   }
 }
 
@@ -421,19 +365,18 @@ a {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 72rem;
+  gap: 0.5rem 2rem;
+  /* Inside the gutters, so the rule lines up with the ones between projects. */
+  width: min(72rem - 2 * var(--gutter), 100% - 2 * var(--gutter));
   margin: 0 auto;
-  padding: 2rem var(--gutter) 3rem;
-  border-top: 1px solid var(--line);
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.footer a {
-  text-decoration: none;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--barrier);
+  font-size: 0.875rem;
+  color: var(--gum);
 }
 
 .footer a:hover {
-  color: var(--text);
+  color: var(--chalk);
 }

@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 
 import track from "./hero/bathurst.json";
 
-export const alt = "Jack Haynes, Melbourne, Australia, beside an outline of the Mount Panorama circuit";
+export const alt = "Jack Haynes, software developer in Melbourne, beside an outline of the Mount Panorama circuit";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -24,7 +24,7 @@ function trackPath() {
 }
 
 export default async function OpengraphImage() {
-  const geist = await readFile(join(process.cwd(), "app/fonts/Geist-SemiBold.ttf"));
+  const archivo = await readFile(join(process.cwd(), "app/fonts/Archivo-ExpandedExtraBold.ttf"));
   const { d, start, width, height } = trackPath();
 
   return new ImageResponse(
@@ -37,27 +37,26 @@ export default async function OpengraphImage() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0 96px",
-          background: "radial-gradient(circle at 75% 50%, #1d1915, #0b0a09 70%)",
-          color: "#ede9e4",
-          fontFamily: "Geist",
+          background: "radial-gradient(circle at 75% 50%, #262a2e, #1c1f22 70%)",
+          color: "#eceee9",
+          fontFamily: "Archivo",
         }}
       >
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 26, letterSpacing: 5, color: "#ff8c3a" }}>MELBOURNE, AUSTRALIA</div>
-          <div style={{ fontSize: 132, lineHeight: 1, letterSpacing: -6, marginTop: 24 }}>Jack</div>
-          <div style={{ fontSize: 132, lineHeight: 1, letterSpacing: -6 }}>Haynes</div>
-          <div style={{ fontSize: 28, color: "#9a938b", marginTop: 40 }}>jackhaynes.dev</div>
+          <div style={{ fontSize: 112, lineHeight: 1, letterSpacing: -3 }}>Jack</div>
+          <div style={{ fontSize: 112, lineHeight: 1, letterSpacing: -3 }}>Haynes</div>
+          <div style={{ fontSize: 30, color: "#8c9a8e", marginTop: 40 }}>Software developer, Melbourne</div>
         </div>
         <svg width={width} height={height} viewBox={`-12 -12 ${width + 24} ${height + 24}`}>
-          <path d={d} fill="none" stroke="#ede9e4" strokeOpacity={0.75} strokeWidth={3} strokeLinejoin="round" />
-          <circle cx={start[0]} cy={start[1]} r={18} fill="#ff8c3a" fillOpacity={0.25} />
-          <circle cx={start[0]} cy={start[1]} r={8} fill="#ff8c3a" />
+          <path d={d} fill="none" stroke="#eceee9" strokeOpacity={0.75} strokeWidth={3} strokeLinejoin="round" />
+          <circle cx={start[0]} cy={start[1]} r={18} fill="#e2231a" fillOpacity={0.3} />
+          <circle cx={start[0]} cy={start[1]} r={8} fill="#e2231a" />
         </svg>
       </div>
     ),
     {
       ...size,
-      fonts: [{ name: "Geist", data: geist, weight: 600, style: "normal" }],
+      fonts: [{ name: "Archivo", data: archivo, weight: 800, style: "normal" }],
     },
   );
 }

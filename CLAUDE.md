@@ -22,7 +22,7 @@ Jack Haynes's personal site, live at https://jackhaynes.dev. Next.js 16 (App Rou
 - `app/projects.ts`: **all project content** (summary, stack, accent colour, links, media). Edit copy here.
 - `app/components/ProjectCard.tsx`, `ProjectVideo.tsx`, `icons.tsx` (inline SVG icons, solid `currentColor` 22px to match each other).
 - `app/hero/TrackHero.tsx`: animated canvas of Mount Panorama from `app/hero/bathurst.json` (OpenStreetMap + SRTM, credited in the footer).
-- `app/opengraph-image.tsx`, `icon.tsx`, `apple-icon.tsx`: generated with `ImageResponse` and `app/fonts/Geist-SemiBold.ttf`.
+- `app/opengraph-image.tsx`, `icon.tsx`, `apple-icon.tsx`: generated with `ImageResponse` and `app/fonts/Archivo-ExpandedExtraBold.ttf` (a static instance; `ImageResponse` can't read variable fonts).
 
 Intentional: "View CV" links to `#` until there's a CV. Don't "fix" it.
 

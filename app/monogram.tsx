@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 
 /** "JH" in the site's colours and type, for the browser tab and home screen icons. */
 export async function monogram(size: number, rounded: boolean) {
-  const geist = await readFile(join(process.cwd(), "app/fonts/Geist-SemiBold.ttf"));
+  const archivo = await readFile(join(process.cwd(), "app/fonts/Archivo-ExpandedExtraBold.ttf"));
 
   return new ImageResponse(
     (
@@ -16,12 +16,12 @@ export async function monogram(size: number, rounded: boolean) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0b0a09",
+          background: "#1c1f22",
           borderRadius: rounded ? size * 0.22 : 0,
-          color: "#ede9e4",
-          fontFamily: "Geist",
-          fontSize: size * 0.52,
-          letterSpacing: -size * 0.035,
+          color: "#eceee9",
+          fontFamily: "Archivo",
+          fontSize: size * 0.4,
+          letterSpacing: -size * 0.01,
         }}
       >
         JH
@@ -30,7 +30,7 @@ export async function monogram(size: number, rounded: boolean) {
     {
       width: size,
       height: size,
-      fonts: [{ name: "Geist", data: geist, weight: 600, style: "normal" }],
+      fonts: [{ name: "Archivo", data: archivo, weight: 800, style: "normal" }],
     },
   );
 }
