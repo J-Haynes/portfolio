@@ -2,15 +2,16 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 
 import type { Project } from "../projects";
-import { ArrowIcon } from "./icons";
 import ProjectVideo from "./ProjectVideo";
+
+const list = new Intl.ListFormat("en-AU", { type: "conjunction" });
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { name, summary, stack, accent, code, url, urlstring, image } = project;
 
   return (
     <article className="project" style={{ "--project-accent": accent } as CSSProperties}>
-      <div className="project-media">
+      <div className={`project-media${image ? ` project-media-${image.frame}` : ""}`}>
         {image ? (
           <div className={`frame frame-${image.frame}`}>
             {image.video ? (
@@ -40,25 +41,16 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="project-text">
         <h3>{name}</h3>
-        {url && urlstring && (
-          <a className="text-link" href={url} target="_blank" rel="noreferrer">
-            {urlstring}
-          </a>
-        )}
         <p>{summary}</p>
-        <ul className="stack" aria-label="Built with">
-          {stack.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <p className="stack">Built with {list.format(stack)}.</p>
         <div className="project-links">
-          {url && (
-            <a className="button" href={url} target="_blank" rel="noreferrer">
-              Visit<ArrowIcon />
+          {url && urlstring && (
+            <a href={url} target="_blank" rel="noreferrer">
+              {urlstring}
             </a>
           )}
-          <a className={url ? "text-link" : "button"} href={code} target="_blank" rel="noreferrer">
-            View source <ArrowIcon />
+          <a href={code} target="_blank" rel="noreferrer">
+            Source on GitHub
           </a>
         </div>
       </div>

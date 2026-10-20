@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <header className="hero">
-        <TrackHero />
+        <TrackHero colours={projects.map((project) => project.accent)} />
         <div className="hero-content">
-          <p className="eyebrow">Melbourne, Australia</p>
           <h1>Jack Haynes</h1>
+          <p className="intro">Software developer in Melbourne, Australia.</p>
           <nav className="hero-links" aria-label="Links">
             {/* TODO: link the CV */}
             <a className="button button-solid" href="#">
@@ -43,9 +43,9 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <span>Jack Haynes · Melbourne · Track map © OpenStreetMap contributors</span>
+        <span>Track map © OpenStreetMap contributors, elevation from NASA SRTM.</span>
         <a href="https://github.com/J-Haynes/portfolio" target="_blank" rel="noreferrer">
-          Source
+          Source for this site
         </a>
       </footer>
     </>

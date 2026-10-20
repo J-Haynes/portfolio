@@ -14,11 +14,16 @@ const TILT = 0.8;
 const ORBIT = 0.03;
 /** Seconds of running each car's trail covers, in simulated time. */
 const TRAIL = 1.4;
-/** Gaps behind the leader, in simulated seconds. */
-const CARS = [0, 3.2, 6.8];
+/** Gaps behind the leader, in simulated seconds, one per car. */
+const GAPS = [0, 3.2, 6.8, 10.1];
 
-const ACCENT = "255, 140, 58";
-const INK = "237, 233, 228";
+const INK = "236, 238, 233";
+
+/** "#e2231a" to "226, 35, 26", for building rgba() strings. */
+function channels(hex: string) {
+  const value = parseInt(hex.slice(1), 16);
+  return `${value >> 16}, ${(value >> 8) & 255}, ${value & 255}`;
+}
 
 const points = track.points;
 const times = track.time;
@@ -104,7 +109,8 @@ function sectionAt(distance: number) {
     : next.name;
 }
 
-export default function TrackHero() {
+/** One car per project, in its accent colour, led by the first. */
+export default function TrackHero({ colours }: { colours: string[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const readoutRef = useRef<HTMLSpanElement>(null);
 
@@ -113,6 +119,8 @@ export default function TrackHero() {
     const readout = readoutRef.current;
     const ctx = canvas?.getContext("2d");
     if (!canvas || !readout || !ctx) return;
+
+    const cars = colours.slice(0, GAPS.length).map((colour, i) => ({ colour: channels(colour), gap: GAPS[i] }));
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const sx = new Float32Array(count);
@@ -227,17 +235,17 @@ export default function TrackHero() {
         return [p[0], p[1]] as const;
       };
 
-      for (let c = CARS.length - 1; c >= 0; c--) {
+      for (let c = cars.length - 1; c >= 0; c--) {
         const leader = c === 0;
-        const colour = leader ? ACCENT : INK;
-        const carTime = lapClock - CARS[c];
+        const { colour, gap } = cars[c];
+        const carTime = lapClock - gap;
         const steps = 22;
         let [prevX, prevY] = position(carTime);
         const [headX, headY] = [prevX, prevY];
         for (let k = 1; k <= steps; k++) {
           const [x, y] = position(carTime - (TRAIL * k) / steps);
           const fade = 1 - k / steps;
-          ctx.strokeStyle = `rgba(${colour}, ${(fade * fade * (leader ? 0.9 : 0.35)).toFixed(3)})`;
+          ctx.strokeStyle = `rgba(${colour}, ${(fade * fade * (leader ? 0.9 : 0.6)).toFixed(3)})`;
           ctx.lineWidth = (leader ? 3 : 2) * (0.4 + fade * 0.6);
           ctx.beginPath();
           ctx.moveTo(prevX, prevY);
@@ -249,12 +257,12 @@ export default function TrackHero() {
 
         if (leader) {
           const glow = ctx.createRadialGradient(headX, headY, 0, headX, headY, 18);
-          glow.addColorStop(0, `rgba(${ACCENT}, 0.45)`);
-          glow.addColorStop(1, `rgba(${ACCENT}, 0)`);
+          glow.addColorStop(0, `rgba(${colour}, 0.45)`);
+          glow.addColorStop(1, `rgba(${colour}, 0)`);
           ctx.fillStyle = glow;
           ctx.fillRect(headX - 18, headY - 18, 36, 36);
         }
-        ctx.fillStyle = `rgba(${colour}, ${leader ? 1 : 0.7})`;
+        ctx.fillStyle = `rgba(${colour}, ${leader ? 1 : 0.85})`;
         ctx.beginPath();
         ctx.arc(headX, headY, leader ? 3.5 : 2.5, 0, Math.PI * 2);
         ctx.fill();
@@ -266,7 +274,7 @@ export default function TrackHero() {
         const { index, fraction } = locate(lapClock);
         const speed = (track.step / (times[index + 1] - times[index])) * 3.6 * PLAYBACK;
         const distance = (index + fraction) * track.step;
-        readout.textContent = `${sectionAt(distance)} · ${Math.round(speed)} km/h`;
+        readout.textContent = `${sectionAt(distance)}, ${Math.round(speed)} km/h`;
       }
     };
 
@@ -345,7 +353,7 @@ export default function TrackHero() {
       canvas.removeEventListener("pointerup", onDragEnd);
       canvas.removeEventListener("pointercancel", onDragEnd);
     };
-  }, []);
+  }, [colours]);
 
   return (
     <>
@@ -353,7 +361,7 @@ export default function TrackHero() {
       <p className="track-caption" aria-hidden="true">
         <span>Mount Panorama, Bathurst</span>
         <span className="track-readout">
-          <span className="track-dot" />
+          <span className="track-dot" style={{ background: colours[0] }} />
           <span ref={readoutRef} />
         </span>
       </p>

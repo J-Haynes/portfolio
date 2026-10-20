@@ -9,7 +9,7 @@ export type Project = {
   name: string;
   summary: string;
   stack: string[];
-  /** Tint behind the screenshot, taken from the project's own colours. */
+  /** The project's own colour: its car in the hero, its frame's trim and its link underlines. */
   accent: string;
   code: string;
   url?: string;
