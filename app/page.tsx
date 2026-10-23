@@ -18,7 +18,7 @@ export default function Home() {
             </a>
             <a
               className="icon-link"
-              href="https://www.linkedin.com/in/jack-haynes-nz/"
+              href="https://www.linkedin.com/in/jack-haynes1/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
