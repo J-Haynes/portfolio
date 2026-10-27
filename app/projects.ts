@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     name: "RuneLite PvP Tools",
     summary:
-      "A PvP-focused fork of RuneLite, the popular Old School RuneScape client. Features a Discord integration, and several other tools to help players follow their leader's call, stay alive, and win the fight!",
+      "A PvP-focused fork of RuneLite, the popular Old School RuneScape client. Features Discord integration, and several other tools to help players follow their leader's call, stay alive, and win the fight!",
     stack: ["Java", "RuneLite"],
     accent: "#c8a165",
     code: "https://github.com/J-Haynes/Runelite-pgtools",
