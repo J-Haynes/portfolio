@@ -12,10 +12,6 @@ export default function Home() {
           <p className="eyebrow">Melbourne, Australia</p>
           <h1>Jack Haynes</h1>
           <nav className="hero-links" aria-label="Links">
-            {/* TODO: link the CV */}
-            <a className="button button-solid" href="#">
-              View CV
-            </a>
             <a
               className="icon-link"
               href="https://www.linkedin.com/in/jack-haynes1/"
